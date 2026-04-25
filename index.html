@@ -43,6 +43,20 @@
       display: flex; align-items: center; justify-content: center;
       color: var(--muted); font-style: italic; font-size: 14px;
     }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+    .carousel-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.95); box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; border: none; z-index: 2;
+      color: var(--ink); font-size: 18px; transition: opacity 0.2s, background 0.2s;
+    }
+    .carousel-btn:hover { background: white; }
+    .carousel-btn:disabled { opacity: 0.3; cursor: default; }
+    .carousel-btn.prev { left: 8px; }
+    .carousel-btn.next { right: 8px; }
   </style>
 </head>
 <body>
@@ -228,7 +242,7 @@
       <h2 class="serif text-[32px] mb-2">Gifts & Decor Ideas</h2>
       <p class="text-[14px] text-[var(--muted)] mb-6">Things to buy, order, or DIY. Add your finds below.</p>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="flex flex-col gap-4">
 
         <!-- Oliver Bonas -->
         <div class="card p-5 flex flex-col gap-4">
@@ -236,22 +250,26 @@
             <h3 class="serif text-[22px]">Oliver Bonas</h3>
             <span class="pill px-3 py-1 text-[12px]">💡 Idea</span>
           </div>
-          <div class="grid grid-cols-5 gap-2">
-            <div class="aspect-square rounded-md overflow-hidden bg-[var(--soft)]">
-              <img src="images/ob_1.jpg" alt="Letter-monogrammed jewellery boxes and dishes" class="w-full h-full object-cover" />
+          <div class="relative">
+            <button class="carousel-btn prev" data-carousel-prev aria-label="Previous">‹</button>
+            <div class="overflow-x-auto scrollbar-hide flex gap-2 scroll-smooth" style="scroll-snap-type: x mandatory;" data-carousel>
+              <div class="w-[200px] h-[200px] shrink-0 rounded-md overflow-hidden bg-[var(--soft)]" style="scroll-snap-align: start;">
+                <img src="images/ob_1.jpg" alt="Letter-monogrammed jewellery boxes and dishes" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-[200px] h-[200px] shrink-0 rounded-md overflow-hidden bg-[var(--soft)]" style="scroll-snap-align: start;">
+                <img src="images/ob_2.jpg" alt="Wifey mug" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-[200px] h-[200px] shrink-0 rounded-md overflow-hidden bg-[var(--soft)]" style="scroll-snap-align: start;">
+                <img src="images/ob_3.jpg" alt="Floral glass candleholders" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-[200px] h-[200px] shrink-0 rounded-md overflow-hidden bg-[var(--soft)]" style="scroll-snap-align: start;">
+                <img src="images/ob_4.jpg" alt="Patchology I Do Crew eye gels" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-[200px] h-[200px] shrink-0 rounded-md overflow-hidden bg-[var(--soft)]" style="scroll-snap-align: start;">
+                <img src="images/ob_5.jpg" alt="Bridal card — Look at you guys being all grown up and getting married" class="w-full h-full object-cover" />
+              </div>
             </div>
-            <div class="aspect-square rounded-md overflow-hidden bg-[var(--soft)]">
-              <img src="images/ob_2.jpg" alt="Wifey mug" class="w-full h-full object-cover" />
-            </div>
-            <div class="aspect-square rounded-md overflow-hidden bg-[var(--soft)]">
-              <img src="images/ob_3.jpg" alt="Floral glass candleholders" class="w-full h-full object-cover" />
-            </div>
-            <div class="aspect-square rounded-md overflow-hidden bg-[var(--soft)]">
-              <img src="images/ob_4.jpg" alt="Patchology I Do Crew eye gels" class="w-full h-full object-cover" />
-            </div>
-            <div class="aspect-square rounded-md overflow-hidden bg-[var(--soft)]">
-              <img src="images/ob_5.jpg" alt="Bridal card — Look at you guys being all grown up and getting married" class="w-full h-full object-cover" />
-            </div>
+            <button class="carousel-btn next" data-carousel-next aria-label="Next">›</button>
           </div>
           <p class="text-[14px] text-[var(--ink)] leading-[1.6]">They have some cool stuff with decent prices. Some bridal gifts as well — letter-based gifts, cards, and general interior cuteness.</p>
           <a href="https://www.oliverbonas.com" target="_blank" rel="noopener noreferrer" class="text-[14px] text-[var(--accent)] underline w-fit">Visit Oliver Bonas →</a>
@@ -263,22 +281,26 @@
             <h3 class="serif text-[22px]">Søstrene Grene</h3>
             <span class="pill px-3 py-1 text-[12px]">💡 Idea</span>
           </div>
-          <div class="grid grid-cols-5 gap-2">
-            <div class="aspect-square rounded-md overflow-hidden bg-[var(--soft)]">
-              <img src="images/sg_1.jpg" alt="Søstrene Grene piece 1" class="w-full h-full object-cover" />
+          <div class="relative">
+            <button class="carousel-btn prev" data-carousel-prev aria-label="Previous">‹</button>
+            <div class="overflow-x-auto scrollbar-hide flex gap-2 scroll-smooth" style="scroll-snap-type: x mandatory;" data-carousel>
+              <div class="w-[200px] h-[200px] shrink-0 rounded-md overflow-hidden bg-[var(--soft)]" style="scroll-snap-align: start;">
+                <img src="images/sg_1.jpg" alt="Søstrene Grene piece 1" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-[200px] h-[200px] shrink-0 rounded-md overflow-hidden bg-[var(--soft)]" style="scroll-snap-align: start;">
+                <img src="images/sg_2.jpg" alt="Søstrene Grene piece 2" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-[200px] h-[200px] shrink-0 rounded-md overflow-hidden bg-[var(--soft)]" style="scroll-snap-align: start;">
+                <img src="images/sg_3.jpg" alt="Søstrene Grene piece 3" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-[200px] h-[200px] shrink-0 rounded-md overflow-hidden bg-[var(--soft)]" style="scroll-snap-align: start;">
+                <img src="images/sg_4.jpg" alt="Søstrene Grene piece 4" class="w-full h-full object-cover" />
+              </div>
+              <div class="w-[200px] h-[200px] shrink-0 rounded-md overflow-hidden bg-[var(--soft)]" style="scroll-snap-align: start;">
+                <img src="images/sg_5.jpg" alt="Søstrene Grene piece 5" class="w-full h-full object-cover" />
+              </div>
             </div>
-            <div class="aspect-square rounded-md overflow-hidden bg-[var(--soft)]">
-              <img src="images/sg_2.jpg" alt="Søstrene Grene piece 2" class="w-full h-full object-cover" />
-            </div>
-            <div class="aspect-square rounded-md overflow-hidden bg-[var(--soft)]">
-              <img src="images/sg_3.jpg" alt="Søstrene Grene piece 3" class="w-full h-full object-cover" />
-            </div>
-            <div class="aspect-square rounded-md overflow-hidden bg-[var(--soft)]">
-              <img src="images/sg_4.jpg" alt="Søstrene Grene piece 4" class="w-full h-full object-cover" />
-            </div>
-            <div class="aspect-square rounded-md overflow-hidden bg-[var(--soft)]">
-              <img src="images/sg_5.jpg" alt="Søstrene Grene piece 5" class="w-full h-full object-cover" />
-            </div>
+            <button class="carousel-btn next" data-carousel-next aria-label="Next">›</button>
           </div>
           <p class="text-[14px] text-[var(--ink)] leading-[1.6]">There's not much, but it's quite cheap and the overall style matches the vibe of the house. Really nice packaging and some lovely decor elements.</p>
           <a href="https://sostrenegrene.com/en-gb" target="_blank" rel="noopener noreferrer" class="text-[14px] text-[var(--accent)] underline w-fit">Visit Søstrene Grene →</a>
@@ -292,5 +314,30 @@
     </footer>
 
   </main>
+
+  <script>
+    document.querySelectorAll('[data-carousel]').forEach((track) => {
+      const wrap = track.parentElement;
+      const prev = wrap.querySelector('[data-carousel-prev]');
+      const next = wrap.querySelector('[data-carousel-next]');
+      const step = 208; // 200px image + 8px gap
+
+      const update = () => {
+        const max = track.scrollWidth - track.clientWidth - 1;
+        prev.disabled = track.scrollLeft <= 1;
+        next.disabled = track.scrollLeft >= max;
+        // Hide arrows entirely if everything fits
+        const fits = track.scrollWidth <= track.clientWidth + 1;
+        prev.style.display = fits ? 'none' : 'flex';
+        next.style.display = fits ? 'none' : 'flex';
+      };
+
+      prev.addEventListener('click', () => track.scrollBy({ left: -step, behavior: 'smooth' }));
+      next.addEventListener('click', () => track.scrollBy({ left: step, behavior: 'smooth' }));
+      track.addEventListener('scroll', update);
+      window.addEventListener('resize', update);
+      update();
+    });
+  </script>
 </body>
 </html>
