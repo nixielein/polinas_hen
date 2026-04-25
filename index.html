@@ -328,31 +328,21 @@
       </div>
     </section>
 
-    <!-- Theme -->
+    <!-- Inspo -->
     <section class="mb-16">
-      <h2 class="serif text-[32px] mb-6">Theme</h2>
-      <div class="card p-6 flex flex-col md:flex-row gap-6 items-center">
-        <div class="placeholder rounded-lg aspect-square w-full md:w-[240px] shrink-0">Image — TBD</div>
-        <div class="flex-1">
-          <h3 class="serif text-[28px] mb-3">Theme — to be chosen</h3>
-          <p class="text-[15px] text-[var(--muted)] leading-[1.6]">We haven't picked the theme yet. Drop suggestions and let's vote.</p>
+      <h2 class="serif text-[32px] mb-2">Inspo</h2>
+      <p class="text-[14px] text-[var(--muted)] mb-6">Theme, decor, dress code references — all the vibes.</p>
+      <div class="relative">
+        <button class="carousel-btn prev" data-carousel-prev aria-label="Previous">‹</button>
+        <div class="overflow-x-auto scrollbar-hide flex gap-3 scroll-smooth" data-carousel>
+          <div class="placeholder h-[450px] w-[450px] shrink-0 rounded-lg">Inspo 1</div>
+          <div class="placeholder h-[450px] w-[450px] shrink-0 rounded-lg">Inspo 2</div>
+          <div class="placeholder h-[450px] w-[450px] shrink-0 rounded-lg">Inspo 3</div>
+          <div class="placeholder h-[450px] w-[450px] shrink-0 rounded-lg">Inspo 4</div>
+          <div class="placeholder h-[450px] w-[450px] shrink-0 rounded-lg">Inspo 5</div>
+          <div class="placeholder h-[450px] w-[450px] shrink-0 rounded-lg">Inspo 6</div>
         </div>
-      </div>
-    </section>
-
-    <!-- Decor & Dress code Inspiration -->
-    <section class="mb-16">
-      <h2 class="serif text-[32px] mb-2">Decor & Dress code</h2>
-      <p class="text-[14px] text-[var(--muted)] mb-6">Inspiration board — vibes, colours, references.</p>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <div class="placeholder rounded-lg aspect-square">Pinterest 1</div>
-        <div class="placeholder rounded-lg aspect-square">Pinterest 2</div>
-        <div class="placeholder rounded-lg aspect-square">Pinterest 3</div>
-        <div class="placeholder rounded-lg aspect-square">Pinterest 4</div>
-        <div class="placeholder rounded-lg aspect-square">Pinterest 5</div>
-        <div class="placeholder rounded-lg aspect-square">Pinterest 6</div>
-        <div class="placeholder rounded-lg aspect-square">Pinterest 7</div>
-        <div class="placeholder rounded-lg aspect-square">Pinterest 8</div>
+        <button class="carousel-btn next" data-carousel-next aria-label="Next">›</button>
       </div>
     </section>
 
@@ -493,7 +483,8 @@
       const wrap = track.parentElement;
       const prev = wrap.querySelector('[data-carousel-prev]');
       const next = wrap.querySelector('[data-carousel-next]');
-      const step = 208; // 200px image + 8px gap
+
+      const getStep = () => Math.max(track.clientWidth * 0.7, 200);
 
       const update = () => {
         const max = track.scrollWidth - track.clientWidth - 1;
@@ -505,8 +496,8 @@
         next.style.display = fits ? 'none' : 'flex';
       };
 
-      prev.addEventListener('click', () => track.scrollBy({ left: -step, behavior: 'smooth' }));
-      next.addEventListener('click', () => track.scrollBy({ left: step, behavior: 'smooth' }));
+      prev.addEventListener('click', () => track.scrollBy({ left: -getStep(), behavior: 'smooth' }));
+      next.addEventListener('click', () => track.scrollBy({ left: getStep(), behavior: 'smooth' }));
       track.addEventListener('scroll', update);
       window.addEventListener('resize', update);
       update();
