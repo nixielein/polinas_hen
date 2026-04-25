@@ -53,7 +53,7 @@
       <h1 class="serif text-[64px] md:text-[88px] leading-[1] mb-6">Polina's Bachelorette</h1>
       <div class="flex flex-wrap items-center justify-center gap-3">
         <span class="pill px-4 py-2 text-[15px]">7 → 9 August 2026</span>
-        <span class="pill px-4 py-2 text-[15px]">Bristol</span>
+        <span class="pill px-4 py-2 text-[15px]">Clifton, Bristol</span>
       </div>
     </header>
 
@@ -116,8 +116,10 @@
             </div>
             <span class="check">✓ Booked by Sasha</span>
           </div>
-          <div class="placeholder rounded-lg aspect-[16/9]">Airbnb listing photo — add screenshot later</div>
-          <p class="text-[14px] text-[var(--muted)] leading-[1.6]">Bristol stay — full details on Airbnb.</p>
+          <div class="rounded-lg aspect-[16/9] overflow-hidden bg-[var(--soft)]">
+            <img src="airbnb-stay.jpg" alt="Airbnb living room — bay window, piano, vintage interior" class="w-full h-full object-cover" />
+          </div>
+          <p class="text-[14px] text-[var(--muted)] leading-[1.6]">Victorian house in Clifton — bay windows, grand piano, garden views.</p>
           <a href="https://www.airbnb.co.uk/rooms/1424533206345645685?unique_share_id=d3a49542-62ea-4f6f-8294-dcbcd9aaab00&viralityEntryPoint=1&s=76&source_impression_id=p3_1777147812_P3Af1TwEl26nNt2f" target="_blank" rel="noopener noreferrer" class="text-[14px] text-[var(--accent)] underline w-fit">Open Airbnb listing →</a>
         </div>
 
@@ -128,12 +130,51 @@
               <span class="text-[12px] uppercase tracking-wide text-[var(--muted)]">Travel</span>
               <h3 class="serif text-[24px] mt-1">Train tickets</h3>
             </div>
-            <span class="pending">⏳ Not booked yet</span>
+            <span class="pending">⏳ Book ASAP</span>
           </div>
-          <div class="text-[14px] text-[var(--ink)] leading-[1.6]">
-            <p class="mb-2"><strong>Outbound:</strong> Fri 7 Aug — time TBD</p>
-            <p><strong>Return:</strong> Sun 9 Aug — time TBD</p>
-            <p class="mt-3 text-[var(--muted)] italic">Times agreed by group, tickets pending purchase.</p>
+
+          <!-- Outbound -->
+          <div class="text-[14px] leading-[1.6]">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-[12px] uppercase tracking-wide text-[var(--accent)] font-medium">Outbound — Fri 7 Aug</span>
+            </div>
+            <p><strong>18:30</strong> London Paddington → <strong>20:27</strong> Clifton Down</p>
+            <p class="text-[13px] text-[var(--muted)]">1h 57m, 1 change at Bristol Temple Meads</p>
+          </div>
+
+          <!-- Return -->
+          <div class="text-[14px] leading-[1.6]">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-[12px] uppercase tracking-wide text-[var(--accent)] font-medium">Return — Sun 9 Aug</span>
+            </div>
+            <p><strong>17:01</strong> Clifton Down → <strong>19:36</strong> London Paddington</p>
+            <p class="text-[13px] text-[var(--muted)]">2h 35m, 1 change at Bristol Temple Meads</p>
+          </div>
+
+          <!-- Price breakdown -->
+          <div class="bg-[var(--soft)] rounded-lg p-4 text-[14px]">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[var(--muted)]">Ticket price</span>
+              <span>£630.00</span>
+            </div>
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-[var(--muted)]">Booking fee</span>
+              <span>£2.79</span>
+            </div>
+            <div class="flex items-center justify-between mb-2 text-[#2d6a2d] font-medium">
+              <span>👯 GroupSave discount</span>
+              <span>− £135.45</span>
+            </div>
+            <div class="flex items-center justify-between pt-2 border-t border-[var(--accent)]/20">
+              <span class="font-medium">Total for the group</span>
+              <span class="font-medium text-[16px]">£497.34</span>
+            </div>
+            <p class="text-[12px] text-[var(--muted)] mt-2">~£62 per person (8 of us)</p>
+          </div>
+
+          <!-- Urgency note -->
+          <div class="bg-[#fff4d6] border border-[#f0c66c]/40 rounded-lg p-3 text-[13px] leading-[1.5]">
+            <strong>⚡ Heads up:</strong> we need to book <strong>all together in one transaction</strong> to get the GroupSave discount. Limited availability — let's lock this in soon!
           </div>
         </div>
       </div>
