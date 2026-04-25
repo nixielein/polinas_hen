@@ -57,6 +57,26 @@
     .carousel-btn:disabled { opacity: 0.3; cursor: default; }
     .carousel-btn.prev { left: 8px; }
     .carousel-btn.next { right: 8px; }
+    .zoomable { cursor: zoom-in; }
+    #lightbox {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.88);
+      display: none; align-items: center; justify-content: center;
+      z-index: 100; padding: 24px; cursor: zoom-out;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img {
+      max-width: 100%; max-height: 100%;
+      object-fit: contain; border-radius: 8px;
+      cursor: default;
+    }
+    #lightbox .close {
+      position: absolute; top: 16px; right: 16px;
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255,255,255,0.15); color: white;
+      border: none; font-size: 22px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #lightbox .close:hover { background: rgba(255,255,255,0.28); }
   </style>
 </head>
 <body>
@@ -350,6 +370,12 @@
 
   </main>
 
+  <!-- Lightbox -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <button class="close" aria-label="Close">×</button>
+    <img alt="" />
+  </div>
+
   <script>
     document.querySelectorAll('[data-carousel]').forEach((track) => {
       const wrap = track.parentElement;
@@ -373,6 +399,42 @@
       window.addEventListener('resize', update);
       update();
     });
+
+    // Lightbox
+    (function() {
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = lightbox.querySelector('img');
+      const closeBtn = lightbox.querySelector('.close');
+
+      function open(src, alt) {
+        lightboxImg.src = src;
+        lightboxImg.alt = alt || '';
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+      function close() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+        lightboxImg.src = '';
+      }
+
+      document.querySelectorAll('img').forEach(img => {
+        // Skip tiny utility images if any (none here, but future-proof)
+        img.classList.add('zoomable');
+        img.addEventListener('click', (e) => {
+          e.stopPropagation();
+          open(img.currentSrc || img.src, img.alt);
+        });
+      });
+
+      closeBtn.addEventListener('click', close);
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) close();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('open')) close();
+      });
+    })();
   </script>
 </body>
 </html>
