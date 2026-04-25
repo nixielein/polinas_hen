@@ -6,54 +6,87 @@
   <title>Polina's Bachelorette</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
-      --bg: #f9f1ec;
-      --ink: #2a1f1f;
-      --muted: #7a6b6b;
-      --accent: #c97a6a;
-      --soft: #f3e3db;
-      --card: #ffffff;
+      --bg: #ede5d3;
+      --ink: #0f0f0f;
+      --muted: #4a4a4a;
+      --accent: #0f0f0f;
+      --soft: #ded4bc;
+      --card: #f5efdc;
+      --line: rgba(15,15,15,0.12);
     }
     body {
       font-family: 'Inter Tight', system-ui, sans-serif;
       background: var(--bg);
       color: var(--ink);
       letter-spacing: 0;
+      -webkit-font-smoothing: antialiased;
     }
-    .serif { font-family: 'Cormorant Garamond', serif; }
-    .card { background: var(--card); border-radius: 16px; }
-    .pill { background: var(--soft); border-radius: 999px; }
+    .serif {
+      font-family: 'Inter Tight', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    h1.serif {
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 0.95;
+    }
+    .uppercase {
+      font-family: 'IBM Plex Mono', monospace;
+      letter-spacing: 0.04em;
+      font-weight: 400;
+    }
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      border: 1px solid var(--line);
+    }
+    .pill {
+      background: transparent;
+      border-radius: 999px;
+      border: 1px solid var(--ink);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 13px;
+    }
+    a { text-underline-offset: 3px; }
     .check {
       display: inline-flex; align-items: center; gap: 6px;
-      background: #d6f0d6; color: #2d6a2d;
-      padding: 4px 10px; border-radius: 999px;
-      font-size: 13px; font-weight: 500;
+      background: var(--ink); color: var(--bg);
+      padding: 4px 12px; border-radius: 999px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px; font-weight: 500; letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
     .pending {
       display: inline-flex; align-items: center; gap: 6px;
-      background: #fce8c2; color: #8a5a00;
-      padding: 4px 10px; border-radius: 999px;
-      font-size: 13px; font-weight: 500;
+      background: transparent; color: var(--ink);
+      padding: 4px 12px; border-radius: 999px;
+      border: 1px solid var(--ink);
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px; font-weight: 500; letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
     .placeholder {
-      background: linear-gradient(135deg, #f3e3db 0%, #e8d0c4 100%);
+      background: linear-gradient(135deg, #ddd2b8 0%, #c8bb9c 100%);
       display: flex; align-items: center; justify-content: center;
-      color: var(--muted); font-style: italic; font-size: 14px;
+      color: var(--muted); font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em;
     }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
     .scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
     .carousel-btn {
       position: absolute; top: 50%; transform: translateY(-50%);
-      width: 36px; height: 36px; border-radius: 50%;
-      background: rgba(255,255,255,0.95); box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--ink); color: var(--bg);
       display: flex; align-items: center; justify-content: center;
       cursor: pointer; border: none; z-index: 2;
-      color: var(--ink); font-size: 18px; transition: opacity 0.2s, background 0.2s;
+      font-size: 18px; transition: opacity 0.2s, background 0.2s;
     }
-    .carousel-btn:hover { background: white; }
+    .carousel-btn:hover { background: #2a2a2a; }
     .carousel-btn:disabled { opacity: 0.3; cursor: default; }
     .carousel-btn.prev { left: 8px; }
     .carousel-btn.next { right: 8px; }
@@ -84,7 +117,7 @@
 
     <!-- Header -->
     <header class="text-center mb-16">
-      <h1 class="serif text-[64px] md:text-[88px] leading-[1] mb-6">Polina's Bachelorette</h1>
+      <h1 class="serif text-[72px] md:text-[112px] mb-6">Polina's Bachelorette</h1>
       <div class="flex flex-wrap items-center justify-center gap-3">
         <span class="pill px-4 py-2 text-[15px]">7 → 9 August 2026</span>
         <span class="pill px-4 py-2 text-[15px]">Clifton, Bristol</span>
@@ -227,7 +260,7 @@
           </div>
 
           <!-- Urgency note -->
-          <div class="bg-[#fff4d6] border border-[#f0c66c]/40 rounded-lg p-3 text-[13px] leading-[1.5]">
+          <div class="border border-[var(--ink)] rounded-lg p-3 text-[13px] leading-[1.5]">
             <strong>⚡ Heads up:</strong> we need to book <strong>all together in one transaction</strong> to get the GroupSave discount. Limited availability — let's lock this in soon!
           </div>
 
