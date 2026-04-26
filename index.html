@@ -10,13 +10,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
-      --bg: #ede5d3;
+      --bg: #e5d5cb;
       --ink: #0f0f0f;
-      --muted: #4a4a4a;
-      --accent: #0f0f0f;
-      --soft: #ded4bc;
-      --card: #f5efdc;
-      --line: rgba(15,15,15,0.12);
+      --muted: #5a4a44;
+      --accent: #ff8aa3;
+      --soft: #d6c4b8;
+      --card: #f3e7da;
+      --line: rgba(15,15,15,0.1);
     }
     body {
       font-family: 'Inter Tight', system-ui, sans-serif;
@@ -260,7 +260,7 @@
           </div>
 
           <!-- Urgency note -->
-          <div class="border border-[var(--ink)] rounded-lg p-3 text-[13px] leading-[1.5]">
+          <div class="rounded-lg p-3 text-[13px] leading-[1.5]" style="background: color-mix(in srgb, var(--accent) 22%, transparent); border: 1px solid var(--accent);">
             <strong>⚡ Heads up:</strong> we need to book <strong>all together in one transaction</strong> to get the GroupSave discount. Limited availability — let's lock this in soon!
           </div>
 
