@@ -69,6 +69,15 @@
       font-size: 12px; font-weight: 500; letter-spacing: 0.04em;
       text-transform: uppercase;
     }
+    .urgent {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: transparent; color: #FF7479;
+      padding: 4px 12px; border-radius: 999px;
+      border: 1px solid #FF7479;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 12px; font-weight: 500; letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
     .placeholder {
       background: linear-gradient(135deg, #ddd2b8 0%, #c8bb9c 100%);
       display: flex; align-items: center; justify-content: center;
@@ -216,7 +225,7 @@
               <span class="text-[12px] uppercase tracking-wide text-[var(--muted)]">Travel</span>
               <h3 class="serif text-[24px] mt-1">Train tickets <span class="text-[14px] font-normal text-[var(--muted)]">(for 9 of us)</span></h3>
             </div>
-            <span class="pending">⏳ Book ASAP</span>
+            <span class="urgent">Book ASAP</span>
           </div>
 
           <!-- Outbound -->
@@ -238,22 +247,22 @@
           </div>
 
           <!-- Price breakdown -->
-          <div class="bg-[var(--soft)] rounded p-4 text-[14px]">
+          <div class="rounded p-4 text-[14px] border border-[var(--ink)]">
             <div class="flex items-center justify-between mb-1">
               <span class="text-[var(--muted)]">Ticket price</span>
-              <span>£630.00</span>
+              <span class="text-[var(--ink)]">£630.00</span>
             </div>
             <div class="flex items-center justify-between mb-1">
               <span class="text-[var(--muted)]">Booking fee</span>
-              <span>£2.79</span>
+              <span class="text-[var(--ink)]">£2.79</span>
             </div>
-            <div class="flex items-center justify-between mb-2 text-[#2d6a2d] font-medium">
-              <span>👯 GroupSave discount</span>
+            <div class="flex items-center justify-between mb-3 text-[#1fa838] font-medium">
+              <span>GroupSave discount</span>
               <span>− £135.45</span>
             </div>
-            <div class="flex items-center justify-between pt-2 border-t border-[var(--accent)]/20">
-              <span class="font-medium">Total for the group</span>
-              <span class="font-medium text-[16px]">£497.34</span>
+            <div class="flex items-center justify-between pt-3 border-t border-[var(--ink)]/15">
+              <span class="font-semibold text-[var(--ink)]">Total for the group</span>
+              <span class="font-semibold text-[16px] text-[var(--ink)]">£497.34</span>
             </div>
             <p class="text-[12px] text-[var(--muted)] mt-2">Covers all 9 tickets · split between 8 of us (Polina gifted) · ~£62 each</p>
           </div>
