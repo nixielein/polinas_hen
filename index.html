@@ -7,7 +7,7 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Fleur+De+Leah&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root {
@@ -32,13 +32,19 @@
       font-weight: 700;
       letter-spacing: -0.02em;
     }
+    .script {
+      font-family: 'Fleur De Leah', cursive;
+      font-weight: 400;
+      letter-spacing: 0;
+      text-transform: none;
+    }
     h1.serif {
       font-weight: 800;
       letter-spacing: -0.035em;
       line-height: 0.95;
     }
     .uppercase {
-      font-family: 'IBM Plex Mono', monospace;
+      font-family: 'Inter Tight', sans-serif;
       letter-spacing: 0.04em;
       font-weight: 400;
     }
@@ -50,7 +56,7 @@
       background: transparent;
       border-radius: 999px;
       border: 1px solid var(--ink);
-      font-family: 'IBM Plex Mono', monospace;
+      font-family: 'Inter Tight', sans-serif;
       font-size: 13px;
     }
     a { text-underline-offset: 3px; }
@@ -58,8 +64,8 @@
       display: inline-flex; align-items: center; gap: 6px;
       background: #1fa838; color: #ffffff;
       padding: 4px 12px; border-radius: 999px;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px; font-weight: 700; letter-spacing: 0.04em;
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 14px; font-weight: 400; letter-spacing: 0.02em;
       text-transform: uppercase;
     }
     .pending {
@@ -67,8 +73,8 @@
       background: transparent; color: #dc2626;
       padding: 4px 12px; border-radius: 999px;
       border: 1px solid #dc2626;
-      font-family: 'IBM Plex Mono', monospace;
-      font-size: 10px; font-weight: 700; letter-spacing: 0.04em;
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 14px; font-weight: 400; letter-spacing: 0.02em;
       text-transform: uppercase;
     }
     .urgent {
@@ -76,14 +82,14 @@
       background: transparent; color: #FF7479;
       padding: 4px 12px; border-radius: 999px;
       border: 1px solid #FF7479;
-      font-family: 'IBM Plex Mono', monospace;
+      font-family: 'Inter Tight', sans-serif;
       font-size: 12px; font-weight: 500; letter-spacing: 0.04em;
       text-transform: uppercase;
     }
     .placeholder {
       background: linear-gradient(135deg, #ddd2b8 0%, #c8bb9c 100%);
       display: flex; align-items: center; justify-content: center;
-      color: var(--muted); font-family: 'IBM Plex Mono', monospace;
+      color: var(--muted); font-family: 'Inter Tight', sans-serif;
       font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em;
     }
     .scrollbar-hide::-webkit-scrollbar { display: none; }
@@ -187,73 +193,73 @@
       <h2 class="serif text-[32px] mb-2">Schedule</h2>
       <p class="text-[14px] text-[var(--muted)] mb-6">Bookings, plans, and gaps to fill.</p>
 
-      <div class="card p-6 flex flex-col gap-7">
+      <div class="flex flex-col gap-10">
 
         <!-- Friday -->
         <div>
-          <h3 class="serif text-[20px] text-[var(--ink)] mb-3">Friday — 7 Aug</h3>
-          <span class="text-[12px] uppercase tracking-wide text-[var(--muted)] block">Evening</span>
-          <div class="flex flex-col">
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[56px] order-1 md:order-none">18:30</span>
+          <h3 class="script text-[36px] text-[var(--ink)] mb-2 leading-none">Friday — 7 Aug</h3>
+          <span class="script text-[26px] text-[var(--muted)] block leading-tight mb-2 mt-2">Evening</span>
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[56px] order-1 md:order-none">18:30</span>
               <div class="w-full md:w-auto md:flex-1 order-3 md:order-none">
-                <p class="text-[15px]">London Paddington → Bristol Temple Meads · Kseniia has all 9 tickets</p>
-                <p class="text-[13.5px] text-[var(--muted)] mt-1 leading-[1.5]">Carriage B · Seat 50 (aisle) + Seats 53–60</p>
+                <p class="text-[16px] font-medium text-[#5A4A44]">London Paddington → Bristol Temple Meads · Kseniia has all 9 tickets</p>
+                <p class="text-[14px] font-normal text-[#5A4A44] mt-1 leading-[1.5]">Carriage B · Seat 50 (aisle) + Seats 53–60</p>
               </div>
             </div>
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[56px] order-1 md:order-none">20:12</span>
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[56px] order-1 md:order-none">20:12</span>
               <div class="w-full md:w-auto md:flex-1 order-3 md:order-none">
-                <p class="text-[15px]">Bristol Temple Meads → Clifton Down</p>
-                <p class="text-[13.5px] text-[var(--muted)] mt-1 leading-[1.5]">No seats assigned</p>
+                <p class="text-[16px] font-medium text-[#5A4A44]">Bristol Temple Meads → Clifton Down</p>
+                <p class="text-[14px] font-normal text-[#5A4A44] mt-1 leading-[1.5]">No seats assigned</p>
               </div>
             </div>
-            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[56px] order-1 md:order-none">20:27</span>
-              <p class="text-[15px] w-full md:w-auto md:flex-1 order-3 md:order-none">Arriving at Clifton Down</p>
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[56px] order-1 md:order-none">20:27</span>
+              <p class="text-[16px] font-medium text-[#5A4A44] w-full md:w-auto md:flex-1 order-3 md:order-none">Arriving at Clifton Down</p>
             </div>
-            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[56px] order-1 md:order-none">21:00</span>
-              <p class="text-[15px] w-full md:w-auto md:flex-1 order-3 md:order-none">
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[56px] order-1 md:order-none">21:00</span>
+              <p class="text-[16px] font-medium text-[#5A4A44] w-full md:w-auto md:flex-1 order-3 md:order-none">
                 Checked in at Airbnb ·
-                <a href="https://www.airbnb.co.uk/rooms/1424533206345645685?unique_share_id=d3a49542-62ea-4f6f-8294-dcbcd9aaab00&viralityEntryPoint=1&s=76&source_impression_id=p3_1777147812_P3Af1TwEl26nNt2f" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] underline">Listing</a> ·
-                <a href="https://maps.app.goo.gl/oVn8u4e7Nx7MxLBr8" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] underline">Google Maps</a>
+                <a href="https://www.airbnb.co.uk/rooms/1424533206345645685?unique_share_id=d3a49542-62ea-4f6f-8294-dcbcd9aaab00&viralityEntryPoint=1&s=76&source_impression_id=p3_1777147812_P3Af1TwEl26nNt2f" target="_blank" rel="noopener noreferrer" class="text-[#5A4A44] underline">Listing</a> ·
+                <a href="https://maps.app.goo.gl/oVn8u4e7Nx7MxLBr8" target="_blank" rel="noopener noreferrer" class="text-[#5A4A44] underline">Google Maps</a>
               </p>
             </div>
-            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[56px] order-1 md:order-none">21:15</span>
-              <p class="text-[15px] w-full md:w-auto md:flex-1 order-3 md:order-none">
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[56px] order-1 md:order-none">21:15</span>
+              <p class="text-[16px] font-medium text-[#5A4A44] w-full md:w-auto md:flex-1 order-3 md:order-none">
                 Dinner at
-                <a href="https://craverestaurant.co.uk/bristol/" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] underline">Crave Bristol</a>
+                <a href="https://craverestaurant.co.uk/bristol/" target="_blank" rel="noopener noreferrer" class="text-[#5A4A44] underline">Crave Bristol</a>
                 — literally next door
               </p>
               <span class="pending order-2 md:order-none ml-auto md:ml-0">Needs booking</span>
             </div>
-            <div class="flex flex-wrap items-center gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[56px] order-1 md:order-none">23:00</span>
-              <p class="text-[15px] w-full md:w-auto md:flex-1 order-3 md:order-none">Home — drinks &amp; snacks if we want. Cute pijama photos ;)</p>
+            <div class="flex flex-wrap items-center gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[56px] order-1 md:order-none">23:00</span>
+              <p class="text-[16px] font-medium text-[#5A4A44] w-full md:w-auto md:flex-1 order-3 md:order-none">Home — drinks &amp; snacks if we want. Cute pijama photos ;)</p>
             </div>
           </div>
         </div>
 
         <!-- Saturday -->
         <div>
-          <h3 class="serif text-[20px] text-[var(--ink)] mb-3">Saturday — 8 Aug</h3>
+          <h3 class="script text-[36px] text-[var(--ink)] mb-2 leading-none">Saturday — 8 Aug</h3>
 
-          <span class="text-[12px] uppercase tracking-wide text-[var(--muted)] block">Morning</span>
-          <div class="flex flex-col mb-4">
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">10 AM</span>
+          <span class="script text-[26px] text-[var(--muted)] block leading-tight mb-2 mt-2">Morning</span>
+          <div class="flex flex-col gap-2 mb-4">
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">10 AM</span>
               <div class="w-full md:w-auto md:flex-1 order-3 md:order-none">
-                <p class="text-[15px]">Breakfast — options, all walkable from the flat</p>
-                <ul class="mt-2 space-y-1.5 text-[13.5px] text-[var(--muted)] leading-[1.5]">
+                <p class="text-[16px] font-medium text-[#5A4A44]">Breakfast — options, all walkable from the flat</p>
+                <ul class="mt-2 space-y-1.5 text-[14px] font-normal text-[#5A4A44] leading-[1.5]">
                   <li>
-                    <a href="https://ivycollection.com/restaurants-near-me/the-ivy-south-west/the-ivy-clifton-brasserie-bristol/" target="_blank" rel="noopener noreferrer" class="text-[var(--ink)] font-medium underline">The Ivy Clifton Brasserie</a> — glam, flower-framed, very Instagrammable (Clifton Village)
-                    <span class="text-[var(--accent)] font-medium">· my pick, hen's classic</span>
+                    <a href="https://ivycollection.com/restaurants-near-me/the-ivy-south-west/the-ivy-clifton-brasserie-bristol/" target="_blank" rel="noopener noreferrer" class="text-[#5A4A44] font-medium underline">The Ivy Clifton Brasserie</a> — glam, flower-framed, very Instagrammable (Clifton Village)
+                    <span class="text-[#5A4A44] font-medium italic">· my pick, hen's classic</span>
                   </li>
                   <li>
-                    <span class="uppercase tracking-wide text-[11px] text-[var(--muted)]">Spare ·</span>
-                    <a href="https://www.terraceat43.com/" target="_blank" rel="noopener noreferrer" class="text-[var(--ink)] font-medium underline">Terrace at 43</a> — pretty terrace, brilliant brunch, better value (Whiteladies Rd)
+                    <span class="text-[13px] text-[#5A4A44]">Spare ·</span>
+                    <a href="https://www.terraceat43.com/" target="_blank" rel="noopener noreferrer" class="text-[#5A4A44] font-medium underline">Terrace at 43</a> — pretty terrace, brilliant brunch, better value (Whiteladies Rd)
                   </li>
                 </ul>
               </div>
@@ -261,59 +267,59 @@
             </div>
           </div>
 
-          <span class="text-[12px] uppercase tracking-wide text-[var(--muted)] block">Day</span>
-          <div class="flex flex-col mb-4">
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">12–2 PM</span>
+          <span class="script text-[26px] text-[var(--muted)] block leading-tight mb-2 mt-2">Day</span>
+          <div class="flex flex-col gap-2 mb-4">
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">12–2 PM</span>
               <div class="w-full md:w-auto md:flex-1 order-3 md:order-none">
-                <p class="text-[15px]">
+                <p class="text-[16px] font-medium text-[#5A4A44]">
                   Graffiti district walk — Stokes Croft + freshly updated
-                  <a href="https://www.upfest.co.uk/festival/upfest-2026/whats-on/" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] underline">UPFEST 2026</a>
+                  <a href="https://www.upfest.co.uk/festival/upfest-2026/whats-on/" target="_blank" rel="noopener noreferrer" class="text-[#5A4A44] underline">UPFEST 2026</a>
                   artworks
                 </p>
-                <p class="text-[13.5px] text-[var(--muted)] mt-1 leading-[1.5]">Craft coffee → craft beer or wine ;)</p>
+                <p class="text-[14px] font-normal text-[#5A4A44] mt-1 leading-[1.5]">Craft coffee → craft beer or wine ;)</p>
               </div>
             </div>
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">2–3 PM</span>
-              <p class="text-[15px] w-full md:w-auto md:flex-1 order-3 md:order-none">Lunch</p>
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">2–3 PM</span>
+              <p class="text-[16px] font-medium text-[#5A4A44] w-full md:w-auto md:flex-1 order-3 md:order-none">Lunch</p>
               <span class="pending shrink-0 order-2 md:order-none ml-auto md:ml-0">Needs booking</span>
             </div>
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">3–6 PM</span>
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">3–6 PM</span>
               <div class="w-full md:w-auto md:flex-1 order-3 md:order-none">
-                <p class="text-[15px]">Games + wander through the centre — Christmas Steps, then down to the Harbour</p>
-                <p class="text-[13.5px] text-[var(--muted)] mt-1 leading-[1.5]">She loves board games; we could bring bridal-themed quizzes about her &amp; Ev.</p>
-                <ul class="mt-2 space-y-1.5 text-[13.5px] text-[var(--muted)] leading-[1.5]">
+                <p class="text-[16px] font-medium text-[#5A4A44]">Games + wander through the centre — Christmas Steps, then down to the Harbour</p>
+                <p class="text-[14px] font-normal text-[#5A4A44] mt-1 leading-[1.5]">She loves board games; we could bring bridal-themed quizzes about her &amp; Ev.</p>
+                <ul class="mt-2 space-y-1.5 text-[14px] font-normal text-[#5A4A44] leading-[1.5]">
                   <li>
-                    <span class="text-[var(--ink)] font-medium">NQ64</span> — arcade bar (15–18 min walk from the graffiti district)
+                    <span class="text-[#5A4A44] font-medium">NQ64</span> — arcade bar (15–18 min walk from the graffiti district)
                   </li>
                   <li>
-                    <a href="https://playgroundbristol.co.uk/" target="_blank" rel="noopener noreferrer" class="text-[var(--ink)] font-medium underline">Playground Bristol</a> — board game bar (2 min from NQ64)
+                    <a href="https://playgroundbristol.co.uk/" target="_blank" rel="noopener noreferrer" class="text-[#5A4A44] font-medium underline">Playground Bristol</a> — board game bar (2 min from NQ64)
                   </li>
                   <li>
-                    <a href="https://www.chanceandcounters.com/bristol-christmas-steps/" target="_blank" rel="noopener noreferrer" class="text-[var(--ink)] font-medium underline">Chance &amp; Counters</a> — board game bar (next door to NQ64)
+                    <a href="https://www.chanceandcounters.com/bristol-christmas-steps/" target="_blank" rel="noopener noreferrer" class="text-[#5A4A44] font-medium underline">Chance &amp; Counters</a> — board game bar (next door to NQ64)
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          <span class="text-[12px] uppercase tracking-wide text-[var(--muted)] block">Evening</span>
-          <div class="flex flex-col">
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">6 PM</span>
-              <p class="text-[15px] w-full md:w-auto md:flex-1 order-3 md:order-none">
+          <span class="script text-[26px] text-[var(--muted)] block leading-tight mb-2 mt-2">Evening</span>
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">6 PM</span>
+              <p class="text-[16px] font-medium text-[#5A4A44] w-full md:w-auto md:flex-1 order-3 md:order-none">
                 Dinner at
-                <a href="https://maps.app.goo.gl/izuScesKN1xM1v3t5" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] underline">Root Bristol</a>
+                <a href="https://maps.app.goo.gl/izuScesKN1xM1v3t5" target="_blank" rel="noopener noreferrer" class="text-[#5A4A44] underline">Root Bristol</a>
                 — ~10 min walk from the board game bars
               </p>
               <span class="check shrink-0 order-2 md:order-none ml-auto md:ml-0">Booked</span>
             </div>
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">8 PM</span>
-              <p class="text-[15px] w-full md:w-auto md:flex-1 order-3 md:order-none">
-                <a href="https://cliftonobservatory.com/event/saturday-sunset-party-balloon-fiesta/" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] underline">Sunset Party at Clifton Observatory</a>
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">8 PM</span>
+              <p class="text-[16px] font-medium text-[#5A4A44] w-full md:w-auto md:flex-1 order-3 md:order-none">
+                <a href="https://cliftonobservatory.com/event/saturday-sunset-party-balloon-fiesta/" target="_blank" rel="noopener noreferrer" class="text-[#5A4A44] underline">Sunset Party at Clifton Observatory</a>
                 — watch the balloon festival, £20 pp incl. welcome drink
               </p>
               <span class="pending shrink-0 order-2 md:order-none ml-auto md:ml-0">Needs booking</span>
@@ -323,24 +329,24 @@
 
         <!-- Sunday -->
         <div>
-          <h3 class="serif text-[20px] text-[var(--ink)] mb-3">Sunday — 9 Aug</h3>
+          <h3 class="script text-[36px] text-[var(--ink)] mb-2 leading-none">Sunday — 9 Aug</h3>
 
-          <span class="text-[12px] uppercase tracking-wide text-[var(--muted)] block">Morning</span>
-          <div class="flex flex-col mb-4">
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">10 AM</span>
-              <p class="text-[15px] w-full md:w-auto md:flex-1 order-3 md:order-none">Checking out of the flat</p>
+          <span class="script text-[26px] text-[var(--muted)] block leading-tight mb-2 mt-2">Morning</span>
+          <div class="flex flex-col gap-2 mb-4">
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">10 AM</span>
+              <p class="text-[16px] font-medium text-[#5A4A44] w-full md:w-auto md:flex-1 order-3 md:order-none">Checking out of the flat</p>
             </div>
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">10–11 AM</span>
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">10–11 AM</span>
               <div class="w-full md:w-auto md:flex-1 order-3 md:order-none">
-                <p class="text-[15px]">Breakfast — pick one</p>
-                <ul class="mt-2 space-y-1.5 text-[13.5px] text-[var(--muted)] leading-[1.5]">
-                  <li><span class="text-[var(--ink)] font-medium">Crave</span> — next door to the flat</li>
-                  <li><span class="text-[var(--ink)] font-medium">Foliage</span></li>
-                  <li><span class="text-[var(--ink)] font-medium">Burra</span> — Clifton Village, 4.8★</li>
+                <p class="text-[16px] font-medium text-[#5A4A44]">Breakfast — pick one</p>
+                <ul class="mt-2 space-y-1.5 text-[14px] font-normal text-[#5A4A44] leading-[1.5]">
+                  <li><span class="text-[#5A4A44] font-medium">Crave</span> — next door to the flat</li>
+                  <li><span class="text-[#5A4A44] font-medium">Foliage</span></li>
+                  <li><span class="text-[#5A4A44] font-medium">Burra</span> — Clifton Village, 4.8★</li>
                   <li>
-                    <a href="https://www.terraceat43.com/" target="_blank" rel="noopener noreferrer" class="text-[var(--ink)] font-medium underline">Terrace at 43</a>
+                    <a href="https://www.terraceat43.com/" target="_blank" rel="noopener noreferrer" class="text-[#5A4A44] font-medium underline">Terrace at 43</a>
                     — if we didn't go Saturday
                   </li>
                 </ul>
@@ -349,28 +355,28 @@
             </div>
           </div>
 
-          <span class="text-[12px] uppercase tracking-wide text-[var(--muted)] block">Day · in Bath</span>
-          <div class="flex flex-col mb-4">
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">11:30 AM</span>
-              <p class="text-[15px] w-full md:w-auto md:flex-1 order-3 md:order-none">Short train to Bath (~15 min)</p>
+          <span class="script text-[26px] text-[var(--muted)] block leading-tight mb-2 mt-2">Day · in Bath</span>
+          <div class="flex flex-col gap-2 mb-4">
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">11:30 AM</span>
+              <p class="text-[16px] font-medium text-[#5A4A44] w-full md:w-auto md:flex-1 order-3 md:order-none">Short train to Bath (~15 min)</p>
               <span class="pending shrink-0 order-2 md:order-none ml-auto md:ml-0">Needs booking</span>
             </div>
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">12:30 PM</span>
-              <p class="text-[15px] w-full md:w-auto md:flex-1 order-3 md:order-none">
-                <a href="https://www.thermaebathspa.com/" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] underline">Thermae Bath Spa</a>
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">12:30 PM</span>
+              <p class="text-[16px] font-medium text-[#5A4A44] w-full md:w-auto md:flex-1 order-3 md:order-none">
+                <a href="https://www.thermaebathspa.com/" target="_blank" rel="noopener noreferrer" class="text-[#5A4A44] underline">Thermae Bath Spa</a>
                 — the one with the rooftop pool. Book a 2-hour session.
               </p>
               <span class="pending shrink-0 order-2 md:order-none ml-auto md:ml-0">Needs booking</span>
             </div>
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">3 PM</span>
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">3 PM</span>
               <div class="w-full md:w-auto md:flex-1 order-3 md:order-none">
-                <p class="text-[15px]">Afternoon tea / late lunch</p>
-                <p class="text-[13.5px] text-[var(--muted)] mt-1 leading-[1.5]">
+                <p class="text-[16px] font-medium text-[#5A4A44]">Afternoon tea / late lunch</p>
+                <p class="text-[14px] font-normal text-[#5A4A44] mt-1 leading-[1.5]">
                   Ideal:
-                  <a href="https://thepumproombath.co.uk/" target="_blank" rel="noopener noreferrer" class="text-[var(--ink)] font-medium underline">The Pump Room</a>
+                  <a href="https://thepumproombath.co.uk/" target="_blank" rel="noopener noreferrer" class="text-[#5A4A44] font-medium underline">The Pump Room</a>
                   — beautiful, but they cap at 6. Might message to ask.
                 </p>
               </div>
@@ -378,18 +384,18 @@
             </div>
           </div>
 
-          <span class="text-[12px] uppercase tracking-wide text-[var(--muted)] block">Evening</span>
-          <div class="flex flex-col">
-            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-1 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">6:13 PM</span>
-              <p class="text-[15px] w-full md:w-auto md:flex-1 order-3 md:order-none">Catch the London-bound train from Bath Spa platform (same ticket as the 6 PM Bristol departure) → 7:36 PM Paddington</p>
+          <span class="script text-[26px] text-[var(--muted)] block leading-tight mb-2 mt-2">Evening</span>
+          <div class="flex flex-col gap-2">
+            <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">6:13 PM</span>
+              <p class="text-[16px] font-medium text-[#5A4A44] w-full md:w-auto md:flex-1 order-3 md:order-none">Catch the London-bound train from Bath Spa platform (same ticket as the 6 PM Bristol departure) → 7:36 PM Paddington</p>
             </div>
           </div>
         </div>
 
         <!-- To pack / to prep -->
         <div>
-          <h3 class="serif text-[20px] text-[var(--ink)] mb-3">Fun stuff to bring</h3>
+          <h3 class="script text-[36px] text-[var(--ink)] mb-2 leading-none">Fun stuff to bring</h3>
           <ul class="text-[14px] text-[var(--muted)] space-y-1.5 leading-[1.5]">
             <li>Printed games</li>
             <li>Questionnaires about Polina &amp; Ev</li>
