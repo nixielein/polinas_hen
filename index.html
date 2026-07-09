@@ -56,12 +56,13 @@
     a { text-underline-offset: 3px; }
     .check {
       display: inline-flex; align-items: center; gap: 6px;
-      background: var(--ink); color: var(--bg);
+      background: #1fa838; color: #ffffff;
       padding: 4px 12px; border-radius: 999px;
       font-family: 'IBM Plex Mono', monospace;
       font-size: 12px; font-weight: 500; letter-spacing: 0.04em;
       text-transform: uppercase;
     }
+    .check svg { width: 16px; height: 16px; stroke-width: 3; }
     .pending {
       display: inline-flex; align-items: center; gap: 6px;
       background: transparent; color: var(--ink);
@@ -193,7 +194,7 @@
               <span class="text-[12px] uppercase tracking-wide text-[var(--muted)]">Stay</span>
               <h3 class="serif text-[24px] mt-1">Airbnb</h3>
             </div>
-            <span class="check">✓ Booked by Sasha</span>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Booked by Sasha</span>
           </div>
           <div class="rounded aspect-[16/9] overflow-hidden bg-[var(--soft)]">
             <img src="airbnb-stay.jpg" alt="Airbnb living room — bay window, piano, vintage interior" class="w-full h-full object-cover" />
@@ -237,7 +238,7 @@
               <h3 class="serif text-[24px] mt-1">Train tickets <span class="text-[14px] font-normal text-[var(--muted)]">(for 9 of us)</span></h3>
               <p class="text-[12px] text-[var(--muted)] mt-1">Booking reference: <span class="text-[var(--ink)] font-mono">529789564143</span></p>
             </div>
-            <span class="check">✓ Booked by Kseniia</span>
+            <span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Booked by Kseniia</span>
           </div>
 
           <!-- Outbound -->
@@ -344,22 +345,17 @@
           <span class="text-[12px] uppercase tracking-wide text-[var(--muted)] block">Morning</span>
           <div class="flex flex-col mb-4">
             <div class="flex items-baseline gap-4 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[64px]">10:00</span>
+              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px]">10 AM</span>
               <div class="flex-1">
                 <p class="text-[15px]">Breakfast — options, all walkable from the flat</p>
                 <ul class="mt-2 space-y-1.5 text-[13.5px] text-[var(--muted)] leading-[1.5]">
                   <li>
-                    <span class="text-[var(--ink)] font-medium">The Ivy Clifton Brasserie</span> — glam, flower-framed, very Instagrammable (Clifton Village)
+                    <a href="https://ivycollection.com/restaurants-near-me/the-ivy-south-west/the-ivy-clifton-brasserie-bristol/" target="_blank" rel="noopener noreferrer" class="text-[var(--ink)] font-medium underline">The Ivy Clifton Brasserie</a> — glam, flower-framed, very Instagrammable (Clifton Village)
                     <span class="text-[var(--accent)] font-medium">· my pick, hen's classic</span>
                   </li>
                   <li>
-                    <span class="text-[var(--ink)] font-medium">Terrace at 43</span> — pretty terrace, brilliant brunch, better value (Whiteladies Rd)
-                  </li>
-                  <li>
-                    <span class="text-[var(--ink)] font-medium">Burra</span> — cool, plant-filled Clifton Village brunch spot (4.8★)
-                  </li>
-                  <li>
-                    <span class="text-[var(--ink)] font-medium">Budapest Café</span> — cute, cosy, Hungarian — for something a bit different
+                    <span class="uppercase tracking-wide text-[11px] text-[var(--muted)]">Spare ·</span>
+                    <a href="https://www.terraceat43.com/" target="_blank" rel="noopener noreferrer" class="text-[var(--ink)] font-medium underline">Terrace at 43</a> — pretty terrace, brilliant brunch, better value (Whiteladies Rd)
                   </li>
                 </ul>
               </div>
@@ -370,7 +366,7 @@
           <span class="text-[12px] uppercase tracking-wide text-[var(--muted)] block">Day</span>
           <div class="flex flex-col mb-4">
             <div class="flex items-baseline gap-4 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[64px]">12–14</span>
+              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px]">12–2 PM</span>
               <div class="flex-1">
                 <p class="text-[15px]">
                   Graffiti district walk — Stokes Croft + freshly updated
@@ -381,12 +377,12 @@
               </div>
             </div>
             <div class="flex items-baseline gap-4 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[64px]">14–15</span>
+              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px]">2–3 PM</span>
               <p class="text-[15px] flex-1">Lunch</p>
               <span class="pending shrink-0">⏳ Needs booking</span>
             </div>
             <div class="flex items-baseline gap-4 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[64px]">14–18</span>
+              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px]">3–6 PM</span>
               <div class="flex-1">
                 <p class="text-[15px]">Games + wander through the centre — Christmas Steps, then down to the Harbour</p>
                 <p class="text-[13.5px] text-[var(--muted)] mt-1 leading-[1.5]">She loves board games; we could bring bridal-themed quizzes about her &amp; Ev.</p>
@@ -408,16 +404,16 @@
           <span class="text-[12px] uppercase tracking-wide text-[var(--muted)] block">Evening</span>
           <div class="flex flex-col">
             <div class="flex items-baseline gap-4 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[64px]">18:00</span>
+              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px]">6 PM</span>
               <p class="text-[15px] flex-1">
                 Dinner at
                 <a href="https://maps.app.goo.gl/izuScesKN1xM1v3t5" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] underline">Root Bristol</a>
                 — ~10 min walk from the board game bars
               </p>
-              <span class="check shrink-0">✓ Booked</span>
+              <span class="check shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Booked</span>
             </div>
             <div class="flex items-baseline gap-4 py-3 border-t border-[var(--soft)]">
-              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[64px]">20:00</span>
+              <span class="text-[17px] font-semibold text-[var(--ink)] tabular-nums shrink-0 min-w-[88px]">8 PM</span>
               <p class="text-[15px] flex-1">
                 <a href="https://cliftonobservatory.com/event/saturday-sunset-party-balloon-fiesta/" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] underline">Sunset Party at Clifton Observatory</a>
                 — watch the balloon festival, £20 pp incl. welcome drink
