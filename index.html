@@ -128,6 +128,26 @@
       display: flex; align-items: center; justify-content: center;
     }
     #lightbox .close:hover { background: rgba(255,255,255,0.28); }
+
+    dialog.spa-dialog {
+      max-width: 620px; width: calc(100% - 32px);
+      max-height: calc(100vh - 48px);
+      padding: 28px 24px 32px;
+      border: none; border-radius: 14px;
+      background: #ffffff;
+      color: var(--ink);
+      overflow-y: auto;
+    }
+    dialog.spa-dialog::backdrop { background: rgba(0,0,0,0.5); }
+    .spa-close {
+      position: absolute; top: 10px; right: 12px;
+      width: 32px; height: 32px; border-radius: 50%;
+      background: transparent; border: none;
+      font-size: 22px; line-height: 1; cursor: pointer;
+      color: var(--muted);
+    }
+    .spa-close:hover { background: rgba(0,0,0,0.06); color: var(--ink); }
+    dialog.spa-dialog { position: fixed; inset: 0; margin: auto; }
   </style>
 </head>
 <body>
@@ -141,7 +161,7 @@
         <span class="pill px-4 py-2 text-[15px]">Clifton, Bristol</span>
       </div>
       <p class="text-[13px] text-[var(--muted)] mt-4">
-        Total budget (per paying person) so far: <span class="text-[var(--ink)] font-semibold">£214.30</span>
+        Total budget (per paying person) so far: <span class="text-[var(--ink)] font-semibold">£278.00</span>
       </p>
     </header>
 
@@ -368,7 +388,7 @@
               <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">12:00</span>
               <div class="w-full md:w-auto md:flex-1 order-3 md:order-none">
                 <p class="text-[16px] font-medium text-[#5A4A44]">Bristol Temple Meads → Bath Spa (12:11)</p>
-                <p class="text-[14px] font-normal text-[#5A4A44] mt-1 leading-[1.5]">11 min direct · GWR · 8 adults · Off-Peak Day Single</p>
+                <p class="text-[14px] font-normal text-[#5A4A44] mt-1 leading-[1.5]">11 min direct · GWR · 8 adults · Off-Peak Day Single · <span class="font-medium text-[var(--ink)]">£7.70 pp</span></p>
                 <div class="mt-2">
                   <span class="inline-flex items-center px-2.5 py-1 rounded text-[14px] text-[#5A4A44] bg-[#E5F1DE]">Carriage J · Seats 17–24</span>
                 </div>
@@ -377,14 +397,17 @@
               <span class="check shrink-0 order-2 md:order-none ml-auto md:ml-0">Booked</span>
             </div>
             <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
-              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">12:30 PM</span>
+              <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">1:00 PM</span>
               <div class="w-full md:w-auto md:flex-1 order-3 md:order-none">
                 <p class="text-[16px] font-medium text-[#5A4A44]">
                   <a href="https://www.thermaebathspa.com/" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] underline">Thermae Bath Spa</a>
                 </p>
-                <p class="text-[14px] font-normal text-[#5A4A44] mt-1 leading-[1.5]">The one with the rooftop pool. Book a 2-hour session.</p>
+                <p class="text-[14px] font-normal text-[#5A4A44] mt-1 leading-[1.5]">2-hour Thermae Welcome (rooftop pool + Minerva + Wellness Suite). Booked by Kseniia for 4 · ref 2016244. Sasha books the other 4 as part 2. <span class="font-medium text-[var(--ink)]">£56 pp</span></p>
+                <p class="text-[14px] font-normal text-[#5A4A44] mt-2 flex flex-wrap gap-x-4">
+                  <button type="button" onclick="document.getElementById('spa-details').showModal()" class="text-[#5A4A44] underline text-left">View details</button>
+                </p>
               </div>
-              <span class="pending shrink-0 order-2 md:order-none ml-auto md:ml-0">Needs booking</span>
+              <span class="check shrink-0 order-2 md:order-none ml-auto md:ml-0">Booked</span>
             </div>
             <div class="flex flex-wrap items-baseline gap-x-4 gap-y-2 bg-white rounded-lg p-4">
               <span class="text-[16px] font-medium text-[#5A4A44] tabular-nums shrink-0 min-w-[88px] order-1 md:order-none">3 PM</span>
@@ -694,6 +717,40 @@
     <button class="close" aria-label="Close">×</button>
     <img alt="" />
   </div>
+
+  <!-- Thermae Spa booking details modal -->
+  <dialog id="spa-details" class="spa-dialog">
+    <button type="button" onclick="document.getElementById('spa-details').close()" class="spa-close" aria-label="Close">×</button>
+    <h3 class="text-[22px] font-semibold text-[var(--ink)]">Thermae Bath Spa · booking</h3>
+    <p class="text-[14px] text-[var(--muted)] mt-1">Sunday 9 August 2026 · 1:00 PM · 4 guests (Kseniia) · ref 2016244</p>
+    <p class="text-[13px] text-[var(--muted)] mt-1 italic">Part 2 (Sasha's 4 guests) booked separately.</p>
+
+    <h4 class="text-[15px] font-semibold text-[var(--ink)] mt-5">What's included — Thermae Welcome (2h)</h4>
+    <ul class="mt-2 space-y-1 text-[14px] text-[var(--ink)] leading-[1.55] list-disc pl-5">
+      <li>Iconic Rooftop Pool</li>
+      <li>Minerva Pool (indoor)</li>
+      <li>Wellness Suite — Aroma Steam Rooms, Infrared Room, Ice Chamber, Celestial Relaxation Room</li>
+      <li>Complimentary towel &amp; robe (bring your own footwear or buy at reception)</li>
+    </ul>
+
+    <h4 class="text-[15px] font-semibold text-[var(--ink)] mt-5">Extra time to relax</h4>
+    <p class="text-[14px] text-[var(--ink)] mt-1 leading-[1.55]">Refreshments at the Springs Café — you get an extra 30 min on your session to enjoy a drink and bite.</p>
+
+    <h4 class="text-[15px] font-semibold text-[var(--ink)] mt-5">Important info</h4>
+    <ul class="mt-2 space-y-1 text-[14px] text-[var(--ink)] leading-[1.55] list-disc pl-5">
+      <li>Double-check date, time and contents; flag any discrepancies.</li>
+      <li>Let them know about any health conditions or changes.</li>
+      <li>Bring the voucher if you paid or part-paid with one.</li>
+      <li>20-minute arrival window — after that entry may be refused or the session shortened.</li>
+      <li>If booking on behalf of others, please pass this on.</li>
+    </ul>
+
+    <h4 class="text-[15px] font-semibold text-[var(--ink)] mt-5">Mobile-free zone</h4>
+    <p class="text-[14px] text-[var(--ink)] mt-1 leading-[1.55]">Phones go into a pouch at reception and live in your locker. Unlock at an unlocking station on exit. <a href="https://vimeo.com/747806831/8d02a6d409" target="_blank" rel="noopener noreferrer" class="text-[var(--accent)] underline">How it works (video)</a>.</p>
+
+    <h4 class="text-[15px] font-semibold text-[var(--ink)] mt-5">Enhance your experience</h4>
+    <p class="text-[14px] text-[var(--ink)] mt-1 leading-[1.55]">Upgrade with a treatment from £80. Call reservations on <a href="tel:+441225331234" class="text-[var(--accent)] underline">01225 33 1234</a>.</p>
+  </dialog>
 
   <script>
     document.querySelectorAll('[data-carousel]').forEach((track) => {
